@@ -10,7 +10,11 @@ public class Assignment2 {
 
         if (0 < diamondDimension && diamondDimension % 2 != 0)
         {
-
+            for (int row = 1; row <= diamondDimension; row++)
+            {
+                for (int star = 1; star <= row; )
+                System.out.print("*");
+            }
         }
     }
 }
