@@ -9,13 +9,25 @@ public class Assignment2 {
         System.out.print("Enter a number: ");
         diamondDimension = scanner.nextInt();
 
-        if (0 < diamondDimension && diamondDimension % 2 != 0)
-        {
-            for (int row = 1; row <= diamondDimension; row++)
-            {
-                for (int star = 1; star <= row; star++)
-                System.out.println("*");
+        for (int row = 1; row <= diamondDimension; row++){
+            for (int space = diamondDimension; space > row; space--){
+                System.out.print(" ");
             }
+            for (int star = 0; star < row * 2 - 1; star++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+        /*for (int row = 1; row <= diamondDimension; row++)
+        {
+            for (int star = 1; star <= row; star += 2)
+                System.out.println(" " + "*");
+        }
+        */
         }
     }
-}
