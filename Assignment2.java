@@ -13,7 +13,7 @@ public class Assignment2 {
         {
             for (int row = 1; row <= diamondDimension; row++)
             {
-                for (int star = 1; star <= row; row++)
+                for (int star = 1; star <= row; star++)
                 System.out.println("*");
             }
         }
