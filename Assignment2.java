@@ -9,26 +9,28 @@ public class Assignment2 {
         System.out.print("Enter a number: ");
         diamondDimension = scanner.nextInt();
 
-        // Top of odd diamond
-        if (diamondDimension % 2 == 1){
-        for (int row = 1; row <= diamondDimension; row++){
-            for (int spacesTop = diamondDimension; spacesTop > row; spacesTop--){
-                System.out.print(" ");
+        // Odd diamond
+        if (diamondDimension % 2 == 1)
+            for (int row = 1; row <= diamondDimension; row++){
+                for (int spaces = diamondDimension; spaces > row; spaces--){
+                    System.out.print(" ");
+                }
+                for (int starEnd = 0; starEnd < row; starEnd++){
+                    System.out.print("*");
+                    for (int star = 1; star <= row; star ++){
+                        System.out.print("*");
+                    }
+                }
+
+                System.out.println();
             }
-            for (int star = 0; star < row; star++){
-                System.out.print("*");
+            for (int row = 1; row <= diamondDimension - 1; row ++){
+                for (int spacesBottom = diamondDimension; spacesBottom < row; spacesBottom++){
+                    System.out.println(" ");
+                }
+                for (int star = 0; star > row; star--){
+                    System.out.print("*");
+                }
             }
-            System.out.println();
-        }
-        }
-        // Bottom of odd diamond
-        for (int row = 1; row <= diamondDimension - 1; row ++){
-            for (int spacesBottom = diamondDimension; spacesBottom < row; spacesBottom++){
-                System.out.println(" ");
-            }
-            for (int star = 0; star > row; star--){
-                System.out.print("*");
-            }
-        }
     }
 }
