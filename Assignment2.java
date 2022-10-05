@@ -11,26 +11,25 @@ public class Assignment2 {
 
         // Odd diamond
         if (diamondDimension % 2 == 1)
-            for (int row = 1; row <= diamondDimension; row++){
+            for (int row = 1; row <= diamondDimension / 2; row++)
+            {
                 for (int spaces = diamondDimension; spaces > row; spaces--){
                     System.out.print(" ");
                 }
-                for (int starEnd = 0; starEnd < row; starEnd++){
+                for (int star = 0; star < row; star++){
                     System.out.print("*");
-                    for (int star = 1; star <= row; star ++){
-                        System.out.print("*");
-                    }
                 }
-
                 System.out.println();
             }
-            for (int row = 1; row <= diamondDimension - 1; row ++){
-                for (int spacesBottom = diamondDimension; spacesBottom < row; spacesBottom++){
+            // for (row = diamondDimension % 2;)
+
+            /*for (int row = 1; row <= diamondDimension - 1; row ++){
+                for (int spaces = diamondDimension; spaces < row; spaces++){
                     System.out.println(" ");
                 }
                 for (int star = 0; star > row; star--){
                     System.out.print("*");
                 }
-            }
+            */
     }
 }
